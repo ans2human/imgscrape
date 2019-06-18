@@ -9,7 +9,7 @@ setup(
   author_email = 'ans2human@gmail.com',      
   url = 'https://github.com/ans2human/imgscrape',   
   long_description=open('README.rst').read(),
-  download_url = 'https://github.com/ans2human/imgscrape/archive/v0.1.tar.gz',    
+  download_url = 'https://github.com/ans2human/imgscrape/archive/v0.1.2.tar.gz',    
   keywords = ['FLIPKART', 'AMAZON', 'SCRAPING', 'SCRAPE', 'IMAGE', 'PRODUCTIMAGES'],   
   install_requires=[            
           'pillow',

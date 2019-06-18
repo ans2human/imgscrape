@@ -1,4 +1,3 @@
-
 Imgscrape
 =========
 
@@ -49,7 +48,7 @@ Installation & Usage
 * Imgscrape requires `chromedriver <http://chromedriver.chromium.org/downloads>`_ to run. Download it.
 * After downloading you'll need to provide the path of chromedriver to the constructer.
 
-.. code-block:: e.g
+.. code-block::
 
    from imgscrape import imgscrape
 
@@ -59,7 +58,7 @@ Installation & Usage
 
 * you can feed a list of product urls and get the image links in a list.
 
-.. code-block:: e.g
+.. code-block::
 
   from imgscrape import imgscrape
 
