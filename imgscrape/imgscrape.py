@@ -5,22 +5,22 @@ from selenium import webdriver
 from urllib.request import urlopen, urlretrieve
 from selenium.common.exceptions import NoSuchElementException
 
-
-def imgscrape(*args):
-    if not args:
+def imgscrape(*urls, path):
+    if not urls:
         raise Exception("No url provided in argument.")
     else:
-        for url in args:
-            driver = webdriver.Chrome(executable_path= 'C:/Users/reckonsys/anshuman-work/product-analysis/productanalysis/chromedriver.exe')
+        lst = []
+        for url in urls:
+            driver = webdriver.Chrome(executable_path=path)
             driver.get(url)
             try:
                 img_url = driver.find_element_by_id('landingImage').get_attribute('src')
             except NoSuchElementException:
                 img_url = driver.find_element_by_xpath('//div[@class="_3BTv9X _3iN4zu"]/img').get_attribute('src')
+            lst.append(img_url)
             driver.quit()
-        return img_url
+        return lst
     
-
 
 def prod_thumbnail(img_url):
     img = Image.open(urlopen(img_url))
